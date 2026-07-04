@@ -4,12 +4,9 @@
 <body>
 <script>
   const params = new URLSearchParams(window.location.search);
-  const vault = params.get('vault');
   const uid = params.get('uid');
-  if (vault && uid) {
-    window.location.href =
-      'obsidian://adv-uri?vault=' + encodeURIComponent(vault) +
-      '&uid=' + encodeURIComponent(uid);
+  if (uid) {
+    window.location.href = 'obsidian://adv-uri?uid=' + encodeURIComponent(uid);
   }
 </script>
 </body>
