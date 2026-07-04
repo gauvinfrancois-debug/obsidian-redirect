@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Redirection Obsidian</title></head>
+<body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const vault = params.get('vault');
+  const uid = params.get('uid');
+  if (vault && uid) {
+    window.location.href =
+      'obsidian://advanced-uri?vault=' + encodeURIComponent(vault) +
+      '&uid=' + encodeURIComponent(uid);
+  }
+</script>
+</body>
+</html>
